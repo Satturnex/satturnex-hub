@@ -1,0 +1,232 @@
+/* Shared product polish for the authenticated Satturnex workspace. */
+:root {
+  --focus-ring: color-mix(in srgb, var(--primary) 70%, white);
+  --warning: #9a6212;
+  --info: #416da8;
+  --surface-raised: color-mix(in srgb, var(--card) 94%, var(--primary) 6%);
+  --shadow-card: 0 10px 30px rgb(20 16 40 / 6%);
+  --shadow-hover: 0 16px 38px color-mix(in srgb, var(--primary) 12%, transparent);
+  --radius-card: 15px;
+}
+
+.auth-page .auth-heading h1 { font-size: clamp(28px, 2.2vw, 32px); }
+.auth-page .auth-heading p { font-size: 14px; line-height: 1.65; }
+.auth-page .auth-field > label { font-size: 13px; }
+.auth-page .auth-input-wrap { min-height: 52px; border-radius: 11px; }
+.auth-page .auth-input-wrap input { font-size: 14px; }
+.auth-page .auth-input-wrap:focus-within { box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 18%, transparent); }
+.auth-page .auth-input-wrap input:focus-visible { outline: 0; }
+.auth-page .auth-options { font-size: 12px; }
+.auth-page .auth-check > span { width: 18px; height: 18px; }
+.auth-page .auth-submit.button { min-height: 50px; border-radius: 11px; font-size: 14px; }
+.auth-page .auth-switch { font-size: 13px; }
+.auth-page .auth-local-note,
+.auth-page .auth-privacy { font-size: 11px; line-height: 1.5; }
+.auth-page .auth-footer { font-size: 10px; }
+.auth-page .password-hint,
+.auth-page .password-strength { font-size: 11px; }
+.auth-page .auth-field-error { font-size: 12px; }
+
+[data-theme="dark"] {
+  --warning: #edbd68;
+  --info: #8fbdf2;
+  --surface-raised: color-mix(in srgb, var(--card) 91%, white 9%);
+  --shadow-card: 0 12px 32px rgb(0 0 0 / 20%);
+  --shadow-hover: 0 18px 42px rgb(0 0 0 / 32%);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.app-shell { min-height: 100dvh; }
+.app-main { min-width: 0; }
+.page-content { padding-top: clamp(28px, 4vw, 48px); }
+.page-heading { align-items: center; gap: 22px; margin-bottom: 30px; }
+.page-heading .eyebrow { font-size: 10px; letter-spacing: .14em; }
+.page-heading h1 { font-size: clamp(27px, 2.4vw, 34px); }
+.page-heading p { max-width: 68ch; font-size: 14px; line-height: 1.65; }
+.page-heading-action { flex: none; }
+
+.app-main .card,
+.app-main .application-card,
+.app-main .notification-card,
+.app-main .settings-card {
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+.app-main .card { border-color: color-mix(in srgb, var(--border) 88%, var(--primary) 12%); }
+.app-main .button {
+  min-height: 42px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 650;
+}
+.app-main .button:active:not(:disabled) { transform: translateY(1px) scale(.99); }
+.app-main .button:disabled { box-shadow: none; }
+.icon-button { min-width: 40px; min-height: 40px; border-radius: 10px; }
+.topbar { height: 72px; }
+.global-search { height: 40px; border-radius: 10px; }
+.global-search input { font-size: 13px; }
+.global-search kbd { font-size: 10px; }
+.sidebar-link { min-height: 40px; font-size: 13px; }
+.sidebar-group > h2 { font-size: 10px; letter-spacing: .12em; }
+.sidebar-footer .theme-select { min-height: 42px; border-radius: 10px; }
+
+.dashboard-stats { gap: 15px; margin-bottom: 22px; }
+.dashboard-stats .stat-card { min-height: 132px; padding: 19px; border-radius: var(--radius-card); }
+.dashboard-stats .stat-top,
+.dashboard-stats .stat-card > small { font-size: 12px; line-height: 1.5; }
+.dashboard-stats .stat-card > strong { font-size: 30px; }
+.control-banner { border-radius: 17px; }
+.control-banner p { max-width: 58ch; font-size: 13px; line-height: 1.6; }
+.control-eyebrow { font-size: 10px; }
+.control-section { margin: 32px 0; }
+.control-section-head h2 { font-size: 21px; }
+.control-section-head p { font-size: 13px; line-height: 1.6; }
+.system-grid { gap: 15px; }
+.system-card { min-height: 166px; padding: 19px; border-radius: 14px; }
+.system-title strong { font-size: 14px; }
+.system-title small { font-size: 12px; }
+.system-status, .system-open { font-size: 11px; }
+.panel { border-radius: var(--radius-card); }
+.panel-head h2 { font-size: 16px; }
+.overview-subtitle { font-size: 12px; }
+.activity-copy strong { font-size: 13px; }
+.activity-copy small { font-size: 12px; line-height: 1.5; }
+.shortcut-row { min-height: 62px; }
+.shortcut-row strong { font-size: 13px; }
+.shortcut-row small { font-size: 11px; }
+
+.applications-toolbar { gap: 11px; margin-bottom: 21px; }
+.filter-search, .filter-select { min-height: 44px; border-radius: 10px; }
+.filter-search input, .filter-select select { font-size: 13px; }
+.applications-grid { gap: 16px; }
+.application-card { padding: 19px; }
+.app-card-name h2, .application-card h2 { font-size: 15px; }
+.application-card p { min-height: 58px; font-size: 12px; line-height: 1.65; }
+.app-card-meta { font-size: 11px; }
+.application-card .app-card-actions .button { min-height: 40px; padding-inline: 13px; font-size: 12px; }
+.app-open-link { min-height: 40px; font-size: 12px; }
+.inline-empty { padding: 32px 20px; border-radius: 13px; font-size: 13px; }
+
+.settings-layout { grid-template-columns: 205px minmax(0, 820px); gap: 24px; }
+.settings-tabs button { min-height: 44px; font-size: 12px; }
+.settings-card { padding: clamp(20px, 3vw, 28px); }
+.settings-card > h2 { font-size: 17px; }
+.settings-card > p { font-size: 13px; line-height: 1.6; }
+.settings-card .field > span,
+.settings-avatar-row strong,
+.preference-row strong,
+.security-option strong { font-size: 12px; }
+.settings-avatar-row small,
+.preference-row small,
+.security-option small { font-size: 11px; line-height: 1.5; }
+.settings-avatar-row .button,
+.settings-actions .button,
+.security-option .button { min-height: 40px; padding-inline: 14px; font-size: 12px; }
+.settings-actions { flex-wrap: wrap; }
+.save-feedback { font-size: 12px; }
+.theme-option { min-height: 132px; padding: 16px; border-radius: 11px; }
+.theme-option strong { font-size: 13px; }
+.theme-option small { font-size: 11px; line-height: 1.5; }
+.settings-preview-row { font-size: 12px; }
+.preference-row { gap: 14px; }
+.security-option { min-height: 62px; }
+
+.admin-panel { padding: clamp(18px, 2.4vw, 26px); border-radius: var(--radius-card); }
+.admin-panel-heading h2 { font-size: 17px; }
+.admin-panel-heading p { font-size: 12px; line-height: 1.5; }
+.admin-feature { min-height: 84px; border-radius: 10px; }
+.admin-feature span { font-size: 12px; }
+.admin-feature small, .demo-note, .admin-empty span { font-size: 11px; line-height: 1.55; }
+.admin-next-step { border-radius: 12px; }
+.admin-next-step strong { font-size: 12px; }
+.admin-next-step small { font-size: 11px; line-height: 1.5; }
+.admin-next-step > a { min-height: 40px; font-size: 12px; }
+.security-metric > span { font-size: 12px; }
+.security-metric small, .security-score > p { font-size: 11px; line-height: 1.5; }
+.permission-table th, .permission-table td { font-size: 11px; }
+.permission-table thead th { font-size: 10px; }
+.health-card > small { font-size: 11px; }
+
+.field input, .field select { min-height: 44px; border-radius: 10px; font-size: 14px; }
+.field > span { margin-bottom: 7px; font-size: 12px; }
+.dropdown summary { min-height: 44px; border-radius: 10px; }
+.dropdown-menu { border-radius: 12px; box-shadow: var(--shadow-hover); }
+.empty-state { border-radius: var(--radius-card); }
+.empty-state h2 { font-size: 17px; }
+.empty-state p { font-size: 13px; line-height: 1.7; }
+.timeline-group > h2 { font-size: 12px; }
+.timeline-item h3 { font-size: 13px; }
+.timeline-item p { font-size: 12px; line-height: 1.6; }
+.timeline-item small { font-size: 11px; }
+.notification-card { padding: 18px; }
+.notification-copy h2 { font-size: 13px; }
+.notification-copy p { font-size: 12px; line-height: 1.6; }
+.notification-copy small { font-size: 11px; }
+.notification-actions button { width: 36px; height: 36px; }
+.modal { max-height: min(85dvh, 760px); padding: 24px; border-radius: 16px; }
+.modal h2 { font-size: 18px; }
+.tooltip-wrap > [role="tooltip"] { padding: 7px 9px; font-size: 11px; border-radius: 7px; }
+.alert { padding: 13px 14px; border-radius: 10px; font-size: 12px; line-height: 1.55; }
+.toast { min-height: 52px; border-radius: 12px; font-size: 12px; }
+
+[data-theme="light"] .app-main .card,
+[data-theme="light"] .app-main .application-card,
+[data-theme="light"] .app-main .notification-card,
+[data-theme="light"] .app-main .settings-card { background: var(--card); }
+[data-theme="dark"] .app-main .card,
+[data-theme="dark"] .app-main .application-card,
+[data-theme="dark"] .app-main .notification-card,
+[data-theme="dark"] .app-main .settings-card { border-color: color-mix(in srgb, var(--border) 82%, var(--primary) 18%); }
+[data-theme="light"] .system-card:hover,
+[data-theme="light"] .app-main .application-card:hover,
+[data-theme="light"] .app-main .notification-card:hover { box-shadow: var(--shadow-hover); }
+[data-theme="dark"] .system-card:hover,
+[data-theme="dark"] .app-main .application-card:hover,
+[data-theme="dark"] .app-main .notification-card:hover { box-shadow: var(--shadow-hover); }
+
+@media (max-width: 840px) {
+  .page-content { padding: 28px 20px 42px; }
+  .page-heading { align-items: flex-start; }
+  .settings-layout { grid-template-columns: minmax(0, 1fr); }
+  .settings-tabs { position: relative; z-index: 1; }
+  .applications-toolbar { flex-wrap: wrap; }
+  .dashboard-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 500px) {
+  .page-content { padding: 23px 15px 34px; }
+  .page-heading { gap: 14px; margin-bottom: 23px; }
+  .page-heading h1 { font-size: 26px; }
+  .page-heading p { font-size: 13px; }
+  .page-heading-action { align-self: stretch; }
+  .page-heading-action > * { max-width: 100%; }
+  .dashboard-stats { gap: 10px; }
+  .dashboard-stats .stat-card { min-height: 120px; padding: 14px; }
+  .dashboard-stats .stat-top, .dashboard-stats .stat-card > small { font-size: 11px; }
+  .dashboard-stats .stat-card > strong { font-size: 26px; }
+  .control-section-head { gap: 10px; }
+  .system-grid { grid-template-columns: minmax(0, 1fr); }
+  .system-card { min-height: 138px; }
+  .settings-tabs { overflow-x: auto; }
+  .settings-card { padding: 18px; }
+  .settings-avatar-row { flex-wrap: wrap; }
+  .settings-actions { gap: 9px; }
+  .save-feedback { flex-basis: 100%; }
+  .theme-options { grid-template-columns: minmax(0, 1fr); }
+  .theme-option { min-height: 92px; display: grid; grid-template-columns: 32px 1fr; align-items: center; column-gap: 10px; }
+  .theme-option > span { grid-row: span 2; }
+  .theme-option strong, .theme-option small { margin: 0; }
+  .admin-feature-grid, .health-grid { grid-template-columns: minmax(0, 1fr); }
+  .notification-card { padding: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}
